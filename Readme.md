@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ирина Кисель](https://up.htmlacademy.ru/htmlcss/31/user/1734435).
-* Наставник: `Неизвестно`.
+* Наставник: `Лиза Пак`(https://htmlacademy.ru/profile/lizzy).
 
 ---
 
