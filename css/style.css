@@ -1,28 +1,25 @@
-@font-face {
-  font-family: "PT Sans";
-  src: local("PT Sans"),
-    local("PT Sans"),
-    url("../fonts/PTSans.woff2") format("woff2"),
-    url("../fonts/PTSans-Bold.woff2") format("woff2"),
-    url("../fonts/PTSans.woff") format("woff"),
-    url("../fonts/PTSans-Bold.woff") format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
 body {
+  margin: 0;
   min-width: 1200px;
-  font-size: 14px;
-  line-height: 21px;
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
   color: #333333;
   background-color: #888888;
 }
 
-.conteiner {
+.wrapper {
+  width: 1280px;
+  margin: 0 auto;
+  background-color: #888888;
+}
+
+.container {
   width: 1200px;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
   background-color: #ffffff;
 }
 
@@ -40,6 +37,7 @@ body {
 }
 
 /* стили для шапки */
+
 .menu-list {
   width: 400px;
   list-style: none;
@@ -86,7 +84,17 @@ body {
   margin: 0 auto;
 }
 
+/* стили для promo */
+/* .promo {
+  height: 509px;
+  background-color: #ffffff;
+  background-image: url(../img/promo-photo.jpg);
+  background-image: url(../img/Shape.png);
+} */
+
+
 /* стили для footer */
+
 .social-list-item {
   width: 46px;
   height: 48px;

@@ -13,9 +13,8 @@
 </head>
 
 <body>
-  <div class="conteiner">
+  <div class="container">
     <header>
-      <h1 class="visually-hidden">город Седона отдых и туризм</h1>
       <nav class="menu">
         <a class="menu-logo" href="index.html">
           <img src="img/logo.svg" width="138" height="70"
@@ -30,6 +29,7 @@
       </nav>
     </header>
     <main>
+      <h1 class="visually-hidden">город Седона отдых и туризм</h1>
       <section>
         <h2 class="visually-hidden">фильтр гостиниц Седоны</h2>
         <form method="GET" action="https://echo.htmlacademy.ru">
@@ -67,28 +67,36 @@
               </li>
             </ul>
           </fieldset>
-          <label for="price">Стоимость в сутки, ₽:</label>
-          <p>От 0</p>
-          <p>До 3000</p>
-          <input type="range" name="price" id="price" min="100" max="3000" step="10">
-          </p>
-          <button type="submit">Показать</button>
+          <fieldset>
+            <legend>Стоимость в сутки, ₽:</legend>
+            <label for="price-min">От</label>
+            <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
+            <label for="price-max">До</label>
+            <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
+            <label for="price"></label>
+            <button type="button"><img src="img/filter-button.svg" alt="ползунок"></button>
+            <button type="button"><img src="img/filter-button.svg" alt="ползунок"></button>
+            <input type="range" name="price" id="price" min="100" max="3000" step="1">
+            <button type="submit">Показать</button>
+          </fieldset>
         </form>
       </section>
-      <section>
+      <section class="sorting">
         <h3 class="visually-hidden">сортировка гостиниц</h3>
         <p>Найдено: 3</p>
         <p>Сортировка:</p>
-        <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По рейтингу</li>
+        <ul class="sorting-list">
+          <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По цене</a></li>
+          <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По типу</a></li>
+          <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По рейтингу</a></li>
         </ul>
+        <button type="button"><img src="img/icon-up.svg" alt="стрелка вверх"></button>
+        <button type="button"><img src="img/icon-down.svg" alt="стрелка вниз"></button>
         <ul>
           <li>
             <h3>Amara Resort & Spa</h3>
             <a href="blank.html"><img src="files/hotel-amara.jpg" width="135" height="90"
-                alt="Изображение отеля Amara Resort & Spa"></a>
+                alt="Отель Amara Resort & Spa лужайка на фоне гор"></a>
             <p>Гостиница</p>
             <p>От 4000 ₽</p>
             <a href="blank.html">Подробнее</a>
@@ -96,8 +104,8 @@
           </li>
           <li>
             <h3>Desert Quail Inn</h3>
-            <a href="blank.html"><img src="files/hotel-desert.jpg" width="135" height="90"
-                alt="Изображение мотеля Desert Quail Inn"></a>
+            <a href="blank.html"><img src="files/motel-desert.jpg" width="135" height="90"
+                alt="Мотель Desert Quail Inn одноэтажные здания у дороги на открытом пространстве на фоне неба"></a>
             <p>Мотель</p>
             <p>От 3000 ₽</p>
             <a href="blank.html">Подробнее</a>
@@ -105,8 +113,8 @@
           </li>
           <li>
             <h3>Villas at Poco Diablo</h3>
-            <a href="blank.html"><img src="files/hotel-villas.jpg" width="135" height="90"
-                alt="Изображение аппартаментов Villas at Poco Diablo"></a>
+            <a href="blank.html"><img src="files/apartments-villas.jpg" width="135" height="90"
+                alt="Аппартаменты Villas at Poco Diablo уютные домики, утопающие в зелени"></a>
             <p>Апартаменты</p>
             <p>От 2000 ₽</p>
             <a href="blank.html">Подробнее</a>
@@ -125,17 +133,18 @@
         <h2 class="visually-hidden">Седона в социалных сетях</h2>
         <ul class="social-list">
           <li class="social-list-item"><a href="blank.html"><img width="17" height="17" src="img/twitter.svg"
-                alt=""></a></li>
-          <li class="social-list-item"><a href="blank.html"><img width="12" height="22" src="img/fb.svg" alt=""></a>
+                alt="перейти на страницу twitter"></a></li>
+          <li class="social-list-item"><a href="blank.html"><img width="12" height="22" src="img/fb.svg"
+                alt="перейти на страницу facebook"></a>
           </li>
           <li class="social-list-item"><a href="blank.html"><img width="20" height="16" src="img/youtube.svg"
-                alt=""></a></li>
+                alt="перейти на канал youtube"></a></li>
         </ul>
       </section>
       <section class="copyright">
         <h2 class="visually-hidden">Авторские права</h2>
         <p>Website by</p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.png" width="115" height="33"
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="33"
             alt="Логотип HTML Academy"></a>
       </section>
     </footer>
