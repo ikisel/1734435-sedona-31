@@ -6,10 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог жилья в Седоне</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="msapplication-config" content="browserconfig.xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#ffffff">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/normalize.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -73,13 +81,10 @@
             <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
             <label for="price-max">До</label>
             <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
-            <div>
-              <button type="button"><img src="img/filter-button.svg" alt="ползунок"></button>
-              <label for="price"></label>
-              <input type="range" name="price" id="price" min="100" max="3000" step="1">
-              <button type="button"><img src="img/filter-button.svg" alt="ползунок"></button>
-            </div>
-
+            <div></div>
+            <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
+            <div></div>
+            <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
             <button type="submit">Показать</button>
           </fieldset>
         </form>
@@ -93,8 +98,8 @@
           <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По типу</a></li>
           <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По рейтингу</a></li>
         </ul>
-        <button type="button"><img src="img/icon-up.svg" alt="стрелка вверх"></button>
-        <button type="button"><img src="img/icon-down.svg" alt="стрелка вниз"></button>
+        <button type="button"><img src="img/icon-up.svg" width="11" height="10" alt="стрелка вверх"></button>
+        <button type="button"><img src="img/icon-down.svg" width="11" height="10" alt="стрелка вниз"></button>
         <ul>
           <li>
             <h3>Amara Resort & Spa</h3>
@@ -104,11 +109,13 @@
             <p>От 4000 ₽</p>
             <a href="blank.html">Подробнее</a>
             <button type="button">Забронировать</button>
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <a href="blank.html">рейтинг:</a>
+            <p class="number">рейтинг:</p>
+            <div class="number-stars">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+            </div>
           </li>
           <li>
             <h3>Desert Quail Inn</h3>
@@ -118,10 +125,12 @@
             <p>От 3000 ₽</p>
             <a href="blank.html">Подробнее</a>
             <button type="button">Забронировать</button>
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <a href="blank.html">рейтинг:</a>
+            <p class="number">рейтинг:</p>
+            <div class="number-stars">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+            </div>
           </li>
           <li>
             <h3>Villas at Poco Diablo</h3>
@@ -131,9 +140,11 @@
             <p>От 2000 ₽</p>
             <a href="blank.html">Подробнее</a>
             <button type="button">Забронировать</button>
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <img src="img/star.svg" alt="количество звёзд отеля">
-            <a href="blank.html">рейтинг:</a>
+            <p class="number">рейтинг:</p>
+            <div class="number-stars">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+              <img src="img/star.svg" width="19" height="17" alt="количество звёзд отеля">
+            </div>
           </li>
         </ul>
       </section>
@@ -145,14 +156,14 @@
         <a class="contacts-item" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
       <section class="social">
-        <h2 class="visually-hidden">Седона в социалных сетях</h2>
+        <h2 class="visually-hidden">Седона в социальных сетях</h2>
         <ul class="social-list">
-          <li class="social-list-item"><a href="blank.html"><img width="17" height="17" src="img/twitter.svg"
+          <li class="social-list-item"><a href="blank.html"><img src="img/twitter.svg" width="17" height="17"
                 alt="перейти на страницу twitter"></a></li>
-          <li class="social-list-item"><a href="blank.html"><img width="12" height="22" src="img/fb.svg"
+          <li class="social-list-item"><a href="blank.html"><img src="img/fb.svg" width="12" height="22"
                 alt="перейти на страницу facebook"></a>
           </li>
-          <li class="social-list-item"><a href="blank.html"><img width="20" height="16" src="img/youtube.svg"
+          <li class="social-list-item"><a href="blank.html"><img src="img/youtube.svg" width="20" height="16"
                 alt="перейти на канал youtube"></a></li>
         </ul>
       </section>
