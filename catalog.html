@@ -81,10 +81,14 @@
             <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
             <label for="price-max">До</label>
             <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
-            <div class="double-slider"></div>
-            <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
-            <div class="double-slider"></div>
-            <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
+            <div class="double-slider">
+              <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
+              <label for="price"></label>
+              <input type="range" name="price" id="price" min="100" max="3000" step="1">
+              <label for="price"></label>
+              <input type="range" name="price" id="price" min="100" max="3000" step="1">
+              <button type="button"><img src="img/filter-button.svg" width="19" height="21" alt="ползунок"></button>
+            </div>
             <button type="submit">Показать</button>
           </fieldset>
         </form>
