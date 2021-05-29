@@ -160,10 +160,16 @@ body {
 }
 
 .sorting-down::before {
+  content: "";
+  position: absolute;
+  top: 313px;
+  left: 1133px;
+  width: 11px;
+  height: 10px;
   background-image: url(/img/icon-up.svg);
 }
 
-.sorting-down {
+/* .sorting-down {
   background-color: var(--basic-grey);
   background-image: url(/img/icon-up.svg);
 
@@ -172,4 +178,4 @@ body {
 .sorting-up {
   background-color: var(--basic-light-blue);
   background-image: url(/img/icon-down.svg);
-}
+} */
