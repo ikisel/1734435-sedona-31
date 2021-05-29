@@ -1,18 +1,40 @@
+:root {
+  --basic-light: #f2f2f2;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-light-blue: #81B3D2;
+  --basic-blue: #669EC0;
+  --basic-dark-blue: #5496BD;
+  --basic-light-grey: #EEEEEE;
+  --basic-grey: #CACACA;
+  --basic-dark-grey: #333333;
+  --basic-extra-grey: #BDBBBC;
+  --basic-medium-grey: #A9A9A9;
+  --special-medium-grey: #EBEBEB;
+  --special-grey: #666666;
+  --special-light: #766357;
+  --special: #604E43;
+  --special-dark: #503E33;
+
+}
+
 body {
   min-width: 1280px;
   margin: 0;
-  font-weight: normal;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-family: "PT Sans", Arial, sans-serif;
-  color: #333333;
-  background-color: #888888;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-light);
 }
 
 .wrapper {
   width: 1280px;
   margin: 0 auto;
-  background-color: #888888;
+  background-color: var(--basic-light);
 }
 
 .container {
@@ -20,7 +42,7 @@ body {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
-  background-color: #ffffff;
+  background-color: var(--basic-white);
 }
 
 .visually-hidden {
@@ -54,6 +76,8 @@ body {
   flex-direction: row;
   justify-content: space-between;
   list-style: none;
+  line-height: 26px;
+  font-weight: 700;
 }
 
 .menu-list li {
@@ -69,13 +93,13 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  color: #000000;
+  color: var(--basic-black);
 }
 
 
 .menu-list a:hover,
 .menu-list a:focus {
-  color: #81B3D2;
+  color: var(--basic-light-blue);
   transition: 0.2s color ease;
   cursor: pointer;
 }
@@ -85,20 +109,67 @@ body {
 }
 
 .menu-list .active a {
-  color: #766357;
+  color: var(--special);
 
 }
 
-/* стили для promo */
+/* стили для welcome */
 
-.promo-photo {
+.welcome-photo {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* стили для footer */
+.copyright-logo:hover {
+  color: var(--basic-light-blue);
+}
+
+.social-list {
+  list-style: none;
+
+}
 
 .social-list-item {
   width: 46px;
   height: 48px;
-  background-color: #81B3D2;
+  background-color: var(--basic-light-blue);
+
+}
+
+.social-list-item:first-of-type {
+  background-image: url(/img/twitter.svg);
+  background-repeat: no-repeat;
+}
+
+.social-list-item:nth-of-type(2) {
+  background-image: url(/img/fb.svg);
+  background-repeat: no-repeat;
+}
+
+.social-list-item:last-of-type {
+  background-image: url(/img/youtube.svg);
+  background-repeat: no-repeat;
+}
+
+/* стили для каталога */
+.number-stars {
+  background-image: url(/img/star.svg);
+
+}
+
+.sorting-down::before {
+  background-image: url(/img/icon-up.svg);
+}
+
+.sorting-down {
+  background-color: var(--basic-grey);
+  background-image: url(/img/icon-up.svg);
+
+}
+
+.sorting-up {
+  background-color: var(--basic-light-blue);
+  background-image: url(/img/icon-down.svg);
 }

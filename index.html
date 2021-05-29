@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-body">
   <div class="wrapper">
     <div class="container">
       <header class="page-header">
@@ -37,22 +37,22 @@
           </ul>
         </nav>
       </header>
-      <main>
+      <main class="center">
         <h1 class="visually-hidden">город Седона отдых и туризм</h1>
-        <section class="promo">
+        <section class="welcome">
           <h2 class="visually-hidden">Седона приглашение</h2>
-          <img class="promo-photo" src="img/promo-photo.jpg" width="1200" height="509"
+          <img class="welcome-photo" src="img/welcome-photo.jpg" width="1200" height="509"
             alt="Вид на горы с высоты птичьего полёта">
-          <p class="promo-title">Седона&mdash;небольшой городок в Аризоне,заслуживающий большего!</p>
-          <p class="promo-description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          <p class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="welcome-description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества Седоны</h2>
           <section class="advantages-item">
             <h3 class="advantages-item-title">Настоящий городок</h3>
-            <p>— №1 —</p>
-            <img class="promo-photo" src="img/town.jpg" width="800" height="256" alt="Один из видов города Седоны">
-            <p class="advantages-item-description">Седона&mdash;не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="advantages-numiration">— №1 —</p>
+            <img class="advantages-photo" src="img/town.jpg" width="800" height="256" alt="Один из видов города Седоны">
+            <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </section>
           <ul class="advantages-list">
             <li>
@@ -71,8 +71,8 @@
           </ul>
           <section class="advantages-item">
             <h3 class="advantages-item-title">Там есть Мост дьявола</h3>
-            <p>— №2 —</p>
-            <img src="img/attractions.jpg" width="800" height="256"
+            <p class="advantages-numiration">— №2 —</p>
+            <img class="advantages-photo" src="img/attractions.jpg" width="800" height="256"
               alt="Мост дьявола в горах - одно из достопримечательностей Седоны">
             <p class="advantages-item-description">Да, по нему можно пройти! Если конечно
               вы осмелитесь</p>
@@ -80,48 +80,54 @@
           <ul class="advantages-list">
             <li>
               <h3 class="advantages-list-title">небольшая площадь</h3>
-              <p>— №3 —</p>
+              <p class="advantages-numiration">— №3 —</p>
               <p class="advantages-list-description">все достопримечательности находятся очень близко</p>
             </li>
             <li>
               <h3 class="advantages-list-title">красивая дорога</h3>
-              <p>— №4 —</p>
+              <p class="advantages-numiration">— №4 —</p>
               <p class="advantages-list-description">ехать в Седону из Лас-Вегаса совсем
                 не скучно!</p>
             </li>
             <li>
               <h3 class="advantages-list-title">мало туристов</h3>
-              <p>— №5 —</p>
+              <p class="advantages-numiration">— №5 —</p>
               <p class="advantages-list-description">большинство едет в гранд каньон
                 и толпится там</p>
             </li>
           </ul>
         </section>
-        <section class="booking">
+        <section class="booking booking-modal">
           <h2 class="visually-hidden">бронирование отеля</h2>
           <p class="booking-title">Заинтересовались?</p>
           <p class="booking-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <button type="button">поиск гостиницы в Седоне</button>
-          <form action="https://echo.htmlacademy.ru" method="POST">
+          <button class="button booking-button" type="button">поиск гостиницы в Седоне</button>
+          <form class="booking-form" action="https://echo.htmlacademy.ru" method="POST">
             <label for="arrival-date">Дата заезда</label>
             <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-            <button type="button"><img src="img/calendar.svg" alt="календарь"></button>
+            <button class="button button-calendar" type="button"><img class="calendar" src="img/calendar.svg"
+                alt="календарь"></button>
             <label for="departure-date">Дата выезда</label>
             <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-            <button type="button"><img src="img/calendar.svg" alt="календарь"></button>
+            <button class="button button-calendar" type="button"><img class="calendar" src="img/calendar.svg"
+                alt="календарь"></button>
             <label for="adult">Взрослые</label>
-            <button type="button"><img src="img/down.svg" alt="убавить количество человек"></button>
+            <button class="button button-back" type="button"><img src="img/down.svg"
+                alt="убавить количество человек"></button>
             <input type="number" name="adult" id="adult" min="1" max="10" step="1" value="2">
-            <button type="button"><img src="img/up.svg" alt="прибавить количество человек"></button>
+            <button class="button button-next" type="button"><img src="img/up.svg"
+                alt="прибавить количество человек"></button>
             <label for="children">Дети</label>
-            <button type="button"><img src="img/down.svg" alt="убавить количество человек"></button>
+            <button class="button button-back" type="button"><img src="img/down.svg"
+                alt="убавить количество человек"></button>
             <input type="number" name="children" id="children" min="1" max="10" step="1" value="0">
-            <button type="button"><img src="img/up.svg" alt="прибавить количество человек"></button>
-            <button type="submit">Найти</button>
+            <button class="button button-next" type="button"><img src="img/up.svg"
+                alt="прибавить количество человек"></button>
+            <button class="button button-search" type="submit">Найти</button>
           </form>
         </section>
-        <section id="map">
+        <section id="map" class="map-city">
           <h2 class="visually-hidden">карта штата</h2>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13093.36246166741!2d-111.7698099308906!3d34.872792172978784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1621586622906!5m2!1sru!2sru"
@@ -129,28 +135,34 @@
         </section>
       </main>
       <footer class="page-footer">
-        <section class="contacts">
+        <section class="footer-contacts">
           <h2 class="visually-hidden">контактная информация</h2>
           <a class="contacts-item" href="blank.html">#visitSEDONA</a>
-          <a class="contacts-item" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="contacts-item contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         </section>
-        <section class="social">
+        <section class="footer-social">
           <h2 class="visually-hidden">Седона в социалных сетях</h2>
           <ul class="social-list">
-            <li class="social-list-item"><a href="blank.html"><img width="17" height="17" src="img/twitter.svg"
-                  alt="перейти на страницу twitter"></a></li>
-            <li class="social-list-item"><a href="blank.html"><img width="12" height="22" src="img/fb.svg"
-                  alt="перейти на страницу facebook"></a>
+            <li class="social-list-item">
+              <a class="social-link" href="blank.html">
+                <span class="visually-hidden">в twitter</span>
+              </a>
             </li>
-            <li class="social-list-item"><a href="blank.html"><img width="20" height="16" src="img/youtube.svg"
-                  alt="перейти на канал youtube"></a></li>
+            <li class="social-list-item">
+              <a class="social-link" href="blank.html">
+                <span class="visually-hidden">в facebook</span>
+              </a>
+            </li>
+            <li class="social-list-item"><a class="social-link" href="blank.html">
+                <span class="visually-hidden">в youtube</span>
+              </a></li>
           </ul>
         </section>
-        <section class="copyright">
-          <h2 class="visually-hidden">Авторские права</h2>
-          <p>Website by</p>
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="33"
-              alt="Логотип HTML Academy"></a>
+        <section class="footer-copyright">
+          <h2 class="visually-hidden">авторские права</h2>
+          <p class="copyright-description">Website by</p>
+          <a class="copyright-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg"
+              width="115" height="33" alt="Логотип HTML Academy"></a>
         </section>
       </footer>
     </div>
