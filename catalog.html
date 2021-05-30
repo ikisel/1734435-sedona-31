@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 
 <body>
@@ -45,15 +45,15 @@
             <legend>Инфраструктура:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="pool" id="filter-pool" checked>
+                <input type="checkbox" name="infrastructure" value="pool" id="filter-pool" checked>
                 <label for="filter-pool">Бассейн</label>
               </li>
               <li>
-                <input type="checkbox" name="parking" id="filter-parking">
+                <input type="checkbox" name="infrastructure" value="parking" id="filter-parking">
                 <label for="filter-parking">Парковка</label>
               </li>
               <li>
-                <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+                <input type="checkbox" name="infrastructure" value="wi-fi" id="filter-wi-fi">
                 <label for="filter-wi-fi">Wi-Fi</label>
               </li>
             </ul>
@@ -62,37 +62,34 @@
             <legend>Тип жилья:</legend>
             <ul>
               <li>
-                <input type="checkbox" name="hotel" id="filter-hotel" checked>
+                <input type="checkbox" name="hotel-type" value="hotel" id="filter-hotel" checked>
                 <label for="filter-hotel">Гостиница</label>
               </li>
               <li>
-                <input type="checkbox" name="motel" id="filter-motel" checked>
+                <input type="checkbox" name="hotel-type" value="motel" id="filter-motel" checked>
                 <label for="filter-motel">Мотель</label>
               </li>
               <li>
-                <input type="checkbox" name="apartments" id="filter-apartments" checked>
+                <input type="checkbox" name="hotel-type" value="apartments" id="filter-apartments" checked>
                 <label for="filter-apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки, ₽:</legend>
-            <label for="price-min">От</label>
-            <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
-            <label for="price-max">До</label>
-            <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
-            <div class="double-slider">
-              <button class="button button-slider" type="button"><img src="img/filter-button.svg" width="19" height="21"
-                  alt="ползунок"></button>
-              <label for="price"></label>
-              <input type="range" name="price" id="price" min="100" max="3000" step="1">
-              <label for="price"></label>
-              <input type="range" name="price" id="price" min="100" max="3000" step="1">
-              <button class="button button-slider" type="button"><img src="img/filter-button.svg" width="19" height="21"
-                  alt="ползунок"></button>
-            </div>
-            <button class="button button-show" type="submit">Показать</button>
+            <p>
+              <label for="price-min">От</label>
+              <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
+            </p>
+            <p>
+              <label for="price-max">До</label>
+              <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
+            </p>
+
+            <!-- тут будет двухползунковый слайдер -->
+
           </fieldset>
+          <button class="button button-show" type="submit">Показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -104,11 +101,16 @@
           <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По типу</a></li>
           <li class="sortting-list-item"><a class="sorting-link" href="blank.html">По рейтингу</a></li>
         </ul>
-        <a class="button button-sorting" href="blank.html"><span class="visually-hidden sorting-down">по
-            убыванию</span></a>
-        <a class="button button-sorting" href="blank.html"><span class="visually-hidden sorting-up">по
-            возрастанию</span></a>
-
+        <ul>
+          <li>
+            <a class="button button-sorting" href="blank.html"><span class="visually-hidden sorting-down">по
+                убыванию</span></a>
+          </li>
+          <li>
+            <a class="button button-sorting" href="blank.html"><span class="visually-hidden sorting-up">по
+                возрастанию</span></a>
+          </li>
+        </ul>
         <ul>
           <li>
             <h3>Amara Resort & Spa</h3>
@@ -117,7 +119,7 @@
             <p>Гостиница</p>
             <p>От 4000 ₽</p>
             <a class="details" href="blank.html">Подробнее</a>
-            <button class="button booking-button" type="button">Забронировать</button>
+            <a class="button booking-button" href="">Забронировать</a>
             <p class="rating">рейтинг: <span class="rating rating-number">8,5</span></p>
             <span class="visually-hidden number-stars">Четырёхзвёздочный отель</span>
 
@@ -129,7 +131,7 @@
             <p>Мотель</p>
             <p>От 3000 ₽</p>
             <a class="details" href="blank.html">Подробнее</a>
-            <button class="button" type="button">Забронировать</button>
+            <a class="button booking-button" href="">Забронировать</a>
             <p class="rating">рейтинг: <span class="rating rating-number">8,9</span></p>
             <span class="visually-hidden number-stars">Трёхзвёздочный отель</span>
 
@@ -141,7 +143,7 @@
             <p>Апартаменты</p>
             <p>От 2000 ₽</p>
             <a class="details" href="blank.html">Подробнее</a>
-            <button class="button" type="button">Забронировать</button>
+            <a class="button booking-button" href="">Забронировать</a>
             <p class="rating">рейтинг: <span class="rating rating-number">9,2</span></p>
             <span class="visually-hidden number-stars">Отель две звезды</span>
 
