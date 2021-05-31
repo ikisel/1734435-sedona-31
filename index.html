@@ -37,56 +37,56 @@
           <h2 class="visually-hidden">Седона - приглашение</h2>
           <img class="welcome-photo" src="img/welcome-photo.jpg" width="1200" height="509"
             alt="Вид на горы с высоты птичьего полёта">
-          <p class="welcome-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+          <p class="welcome-title">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</p>
           <p class="welcome-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
         </section>
         <section class="advantages">
           <h2 class="visually-hidden">Преимущества Седоны</h2>
-          <ol class="advantages">
-            <li class="advantage-item">
-              <section class="advantages-item">
-                <h3 class="advantages-item-title">Настоящий городок</h3>
-                <img class="advantages-photo" src="img/town.jpg" width="800" height="256"
+          <ol class="advantages-list">
+            <li class="advantages-list-item">
+              <section class="features">
+                <h3 class="features-title">Настоящий городок</h3>
+                <img class="features-photo" src="img/town.jpg" width="800" height="256"
                   alt="Один из видов города Седоны">
-                <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+                <p class="features-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </section>
-              <ul class="advantages-list">
-                <li>
-                  <h3 class="advantages-list-title">Жильё</h3>
-                  <p class="advantages-list-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+              <ul class="features-list">
+                <li class="features-list-item">
+                  <h3 class="features-title">Жильё</h3>
+                  <p class="features-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
                 </li>
-                <li>
-                  <h3 class="advantages-list-title">Еда</h3>
-                  <p class="advantages-list-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <li class="features-list-item">
+                  <h3 class="features-title">Еда</h3>
+                  <p class="features-description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </li>
-                <li>
-                  <h3 class="advantages-list-title">Сувениры</h3>
-                  <p class="advantages-list-description">Не только китайского, но и местного
+                <li class="features-list-item">
+                  <h3 class="features-title">Сувениры</h3>
+                  <p class="features-description">Не только китайского, но и местного
                     производства!</p>
                 </li>
               </ul>
             </li>
-            <li class="advantage-item">
-              <section class="advantages-item">
-                <h3 class="advantages-item-title">Там есть Мост дьявола</h3>
-                <img class="advantages-photo" src="img/attractions.jpg" width="800" height="256"
+            <li class="advantages-list-item">
+              <section class="features">
+                <h3 class="features-title">Там есть Мост дьявола</h3>
+                <img class="features-photo" src="img/attractions.jpg" width="800" height="256"
                   alt="Мост дьявола в горах - одно из достопримечательностей Седоны">
-                <p class="advantages-item-description">Да, по нему можно пройти! Если, конечно,
+                <p class="features-description">Да, по нему можно пройти! Если, конечно,
                   вы осмелитесь</p>
               </section>
             </li>
-            <li class="advantage-item">
-              <h3 class="advantages-list-title">Небольшая площадь</h3>
-              <p class="advantages-list-description">Все достопримечательности находятся очень близко</p>
+            <li class="advantages-list-item">
+              <h3 class="features-title">Небольшая площадь</h3>
+              <p class="features-description">Все достопримечательности находятся очень близко</p>
             </li>
-            <li class="advantage-item">
-              <h3 class="advantages-list-title">Красивая дорога</h3>
-              <p class="advantages-list-description">Ехать в Седону из Лас-Вегаса совсем
+            <li class="advantages-list-item">
+              <h3 class="features-title">Красивая дорога</h3>
+              <p class="features-description">Ехать в Седону из Лас-Вегаса совсем
                 не скучно!</p>
             </li>
-            <li class="advantage-item">
-              <h3 class="advantages-list-title">Мало туристов</h3>
-              <p class="advantages-list-description">Большинство едет в Гранд каньон
+            <li class="advantages-list-item">
+              <h3 class="features-title">Мало туристов</h3>
+              <p class="features-description">Большинство едет в Гранд каньон
                 и толпится там</p>
             </li>
           </ol>
@@ -94,38 +94,40 @@
         <section class="booking booking-modal">
           <h2 class="visually-hidden">Бронирование отеля</h2>
           <p class="booking-title">Заинтересовались?</p>
-          <p class="booking-description">Укажите предполагаемые даты поездки,и мы покажем вам лучшие предложения
+          <p class="booking-description">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <details>
+          <details class="booking-modal-form">
             <summary class="button booking-button">Поиск гостиницы в Седоне</summary>
             <form class="booking-form" action="https://echo.htmlacademy.ru" method="POST">
-              <p>
-                <label for="arrival-date">Дата заезда</label>
+              <p class="booking-form-wrapper">
+                <label class="booking-form-description" for="arrival-date">Дата заезда</label>
                 <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-                <button class="button button-calendar" hidden="" type="button"><span>Показать календарь для выбора
+                <button class="button button-calendar" hidden="" type="button"><span class="calendar">Показать календарь
+                    для выбора
                     даты</span></button>
               </p>
-              <p>
-                <label for="departure-date">Дата выезда</label>
+              <p class="booking-form-wrapper">
+                <label class="booking-form-description" for="departure-date">Дата выезда</label>
                 <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-                <button class="button button-calendar" hidden="" type="button"><span>Показать календарь для выбора
+                <button class="button button-calendar" hidden="" type="button"><span class="calendar">Показать календарь
+                    для выбора
                     даты</span></button>
               </p>
-              <p>
-                <label for="adult">Взрослые</label>
+              <p class="booking-form-wrapper">
+                <label class="booking-form-description" for="adult">Взрослые</label>
                 <button class="button button-back" hidden="" type="button"><img src="img/down.svg"
-                    alt="убавить количество человек"><span>Уменьшить значение</span></button>
+                    alt="убавить количество человек"><span class="number-back">Уменьшить значение</span></button>
                 <input type="number" name="adult" id="adult" min="1" max="10" step="1" value="2">
-                <button class="button button-next" hidden="" type="button"><span>Увеличить значение</span><img
-                    src="img/up.svg" alt="прибавить количество человек"></button>
+                <button class="button button-next" hidden="" type="button"><span class="number-next">Увеличить
+                    значение</span><img src="img/up.svg" alt="прибавить количество человек"></button>
               </p>
-              <p>
-                <label for="children">Дети</label>
+              <p class="booking-form-wrapper">
+                <label class="booking-form-description" for="children">Дети</label>
                 <button class="button button-back" hidden="" type="button"><img src="img/down.svg"
-                    alt="убавить количество человек"><span>Уменьшить значение</span></button>
+                    alt="убавить количество человек"><span class="number-back">Уменьшить значение</span></button>
                 <input type="number" name="children" id="children" min="1" max="10" step="1" value="0">
-                <button class="button button-next" hidden="" type="button"><span>Увеличить значение</span><img
-                    src="img/up.svg" alt="прибавить количество человек"></button>
+                <button class="button button-next" hidden="" type="button"><span class="number-next">Увеличить
+                    значение</span><img src="img/up.svg" alt="прибавить количество человек"></button>
               </p>
 
               <button class="button button-search" type="submit">Найти</button>
@@ -180,6 +182,7 @@
 
     <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
         href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p>
+
   </div>
 
 </body>

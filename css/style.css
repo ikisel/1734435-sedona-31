@@ -49,18 +49,11 @@ body {
   background-color: var(--basic-light);
 }
 
-.wrapper {
-  width: 1280px;
-  margin: 0 auto;
-  background-color: var(--basic-light);
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding-left: 40px;
-  padding-right: 40px;
   background-color: var(--basic-white);
+  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
@@ -98,13 +91,8 @@ body {
   font-weight: 700;
 }
 
-.menu-list li {
-  margin-bottom: 0;
-  width: 300px;
-}
 
-
-.menu-list a {
+.link-item {
   display: block;
   padding: 5px 10px;
   line-height: 26px;
@@ -115,23 +103,22 @@ body {
 }
 
 
-.menu-list a:hover,
-.menu-list a:focus {
+.link-item:hover,
+.link-item:focus {
   color: var(--basic-light-blue);
   transition: 0.2s color ease;
   cursor: pointer;
 }
 
-.menu-list a:active {
+.link-item:active {
   opacity: 0.3;
 }
 
-.menu-list .active a {
-  color: var(--special);
-
+.menu-list-item .link-item:not([href]) {
+  color: var(--special-light);
 }
 
-/* стили для welcome */
+/* стили для секции welcome */
 
 .welcome-photo {
   display: block;
@@ -140,9 +127,151 @@ body {
   background-color: var(--basic-white);
 }
 
+.welcome-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.welcome-description {
+  font-size: inherit;
+  line-height: 26px;
+  text-align: center;
+}
+
+/* стили для секции advantages */
+.advantages-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features {
+  background-color: var(--basic-light-blue);
+  color: var(--basic-white);
+}
+
+.features-photo {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  background-color: var(--basic-light-blue);
+}
+
+.features-title {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages-list-item:nth-child(3),
+.advantages-list-item:nth-child(4),
+.advantages-list-item:last-child {
+  background-color: var(--basic-light-grey);
+
+}
+
+/* стили для секции booking */
+
+.booking-title {
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.booking-description {
+  color: var(--basic-dark-grey);
+  line-height: 24px;
+  text-align: center;
+}
+
+
+.booking-button {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--special-light);
+  color: var(--basic-white);
+  text-align: center;
+  cursor: pointer;
+}
+
+.booking-button:hover,
+.booking-button:focus {
+  background-color: var(--special);
+}
+
+.booking-button:active {
+  background-color: var(--special-dark);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.booking-form-description {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.booking-form {
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  text-align: center;
+  /* width: 568px;
+  height: 395px; */
+}
+
+.booking-form-wrapper input[type="text"] {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--basic-light);
+}
+
+.button-search {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--basic-light-blue);
+  color: var(--basic-white);
+  text-align: center;
+}
+
+.button-search:hover,
+.button-search:focus {
+  background-color: var(--basic-blue);
+}
+
+.button-search:active {
+  background-color: var(--basic-dark-blue);
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* стили для footer */
-.copyright-logo:hover {
-  color: var(--basic-light-blue);
+
+.contacts-item {
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.copyright-logo:hover,
+.copyright-logo:focus {
+  fill: var(--basic-light-blue);
+}
+
+.copyright-logo:active {
+  color: var(--basic-extra-grey);
 }
 
 .social-list {
@@ -154,13 +283,28 @@ body {
   width: 46px;
   height: 48px;
   background-color: var(--basic-light-blue);
+  cursor: pointer;
+}
 
+.social-list-item:hover,
+.social-list-item:focus {
+  background-color: var(--basic-blue);
+}
+
+.social-list-item:active {
+  background-color: var(--basic-dark-blue);
+
+}
+
+.social-link:active {
+  opacity: 0.3;
 }
 
 .social-list-item:first-of-type {
   background-image: url(/img/twitter.svg);
   background-repeat: no-repeat;
 }
+
 
 .social-list-item:nth-of-type(2) {
   background-image: url(/img/fb.svg);
