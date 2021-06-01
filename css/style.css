@@ -381,8 +381,8 @@ body {
 
 .filter {
   position: relative;
-  background-color: var(--basic-white);
-  background-image: url("../img/welcome-photo.jpg");
+  background-color: var(--basic-light-blue);
+  background-image: url("../img/catalog-main-photo.jpg");
   background-repeat: no-repeat;
 }
 
