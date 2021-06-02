@@ -566,13 +566,9 @@ body {
 
 }
 
-.rating {
-  position: relative;
-}
-
 .rating::after {
   content: ":";
-  position: absolute;
+  display: inline;
 
 }
 
