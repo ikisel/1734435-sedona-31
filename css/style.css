@@ -563,27 +563,39 @@ body {
 .rating-description {
   color: var(--special-grey);
   background-color: var(--basic-light);
+
 }
 
-.rating-hotel {
+.rating {
   position: relative;
 }
 
-.rating-hotel::after {
+.rating::after {
+  content: ":";
+  position: absolute;
+
+}
+
+.number-stars-hotel {
+  position: relative;
+}
+
+.number-stars-hotel::after {
   content: "";
   position: absolute;
-  width: 80px;
+  width: 90px;
   height: 17px;
   background-image: url("../img/star.svg");
   background-repeat: space;
 
 }
 
-.rating-motel {
+.number-stars-motel {
   position: relative;
+  padding-bottom: 10px;
 }
 
-.rating-motel::after {
+.number-stars-motel::after {
   content: "";
   position: absolute;
   width: 70px;
@@ -593,14 +605,15 @@ body {
 
 }
 
-.rating-apartments {
+.number-stars-apartments {
   position: relative;
+  padding-bottom: 10px;
 }
 
-.rating-apartments::after {
+.number-stars-apartments::after {
   content: "";
   position: absolute;
-  width: 50px;
+  width: 45px;
   height: 17px;
   background-image: url("../img/star.svg");
   background-repeat: space;
