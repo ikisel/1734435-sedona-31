@@ -34,6 +34,10 @@
   --special-light: #766357;
   --special: #604E43;
   --special-dark: #503E33;
+  --basic-shadow-black: rgba(0, 1, 1, 0.2);
+  --special-shadow-black: rgba(0, 1, 1, 0.15);
+  --neutral-white: rgba(255, 255, 255, 0.3);
+  --neutral-black: rgba(0, 0, 0, 0.3);
 
 }
 
@@ -54,20 +58,13 @@ body {
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+  box-shadow: 0px 5px 15px var(--basic-shadow-black);
 }
 
 .visually-hidden {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  margin: -1px;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  border: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
+  transform: scale(0);
+
 }
 
 
@@ -226,7 +223,7 @@ body {
 
 .booking-button:active {
   background-color: var(--special-dark);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-white);
 }
 
 .booking-form-description {
@@ -237,7 +234,7 @@ body {
 
 .booking-form {
   background-color: var(--basic-white);
-  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
+  box-shadow: 0px 7px 15px var(--special-shadow-black);
   text-align: center;
   /* width: 568px;
   height: 395px; */
@@ -276,7 +273,7 @@ body {
 
 .button-search:active {
   background-color: var(--basic-dark-blue);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--neutral-white);
 }
 
 /* стили для footer */
@@ -436,7 +433,7 @@ body {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--neutral-black);
   text-decoration-style: dotted;
   text-decoration-color: var(--basic-light-blue);
   text-decoration-thickness: 1px;
@@ -514,7 +511,7 @@ body {
 }
 
 .sorting-results-title:active {
-  color: rgba(0, 0, 0, 0.3);
+  color: var(--neutral-black);
 }
 
 .rating-title {
@@ -542,7 +539,7 @@ body {
 }
 
 .booking-details:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--neutral-white);
   background-color: var(--basic-dark-blue);
 }
 
@@ -556,7 +553,7 @@ body {
 }
 
 .booking-button:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--neutral-white);
   background-color: var(--special-dark);
 }
 
