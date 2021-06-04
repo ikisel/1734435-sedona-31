@@ -41,8 +41,16 @@
 
 }
 
-body {
-  min-width: 1280px;
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas:
+    "page-header"
+    "main-container"
+    "page-footer";
+  align-content: start;
+  min-width: 1200px;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -52,6 +60,26 @@ body {
   color: var(--basic-black);
   text-transform: uppercase;
   background-color: var(--basic-light);
+
+}
+
+.page-header {
+  grid-area: page-header;
+  outline: 3px solid red;
+}
+
+.main-container {
+  grid-area: main-container;
+  outline: 3px solid green;
+}
+
+.page-footer {
+  grid-area: page-footer;
+  outline: 3px solid pink;
+}
+
+.page {
+  height: 100%;
 }
 
 .container {
@@ -70,29 +98,54 @@ body {
 
 /* стили для шапки */
 
+
 .menu-logo {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  z-index: 2;
   width: 100%;
 }
 
+.main-logo {
+  display: block;
+
+}
+
 .menu-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  z-index: 1;
   margin: 0;
   margin-top: -40px;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   list-style: none;
   line-height: 26px;
   font-weight: 700;
 }
 
+.menu-list-item:first-child {
+  grid-column: 1/2;
+  margin-left: 72px;
+}
+
+.menu-list-item:nth-child(2) {
+  grid-column: 2/3;
+  justify-self: end;
+}
+
+.menu-list-item:nth-child(3) {
+  grid-column: -3/-2;
+  margin-left: 16px;
+}
+
+.menu-list-item:last-child {
+  grid-column: -2/-1;
+  justify-self: center;
+}
 
 .link-item {
   display: block;
-  padding: 5px 10px;
+  /* padding: 5px 10px; */
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
@@ -139,6 +192,7 @@ body {
 }
 
 /* стили для секции advantages */
+
 .advantages-title {
   font-size: 21px;
   line-height: 26px;
@@ -153,14 +207,40 @@ body {
 }
 
 .advantages-list {
+  display: grid;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+
+.features,
+.features-list,
+.advantages-list-item-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+
+.features-photo {
+  grid-column: -1/-3;
+}
+
+.features-title {
+  grid-column: 1/2;
+}
+
+.features-description {
+  grid-column: 1/2;
+}
+
 .features {
   background-color: var(--basic-light-blue);
   color: var(--basic-white);
+}
+
+.features-photo {
+  order: 2;
 }
 
 .features-photo {
@@ -182,9 +262,10 @@ body {
   padding: 0;
 }
 
-.advantages-list-item:nth-child(3),
+/* .advantages-list-item:nth-child(3),
 .advantages-list-item:nth-child(4),
-.advantages-list-item:last-child {
+.advantages-list-item:last-child  */
+.advantages-list-item-wrapper {
   background-color: var(--basic-light-grey);
 
 }
@@ -276,10 +357,27 @@ body {
   color: var(--neutral-white);
 }
 
+.map-photo {
+  display: block;
+}
+
 /* стили для footer */
+.page-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+
 .social-list {
   list-style: none;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(3, 1fr);
+}
 
+.footer-copyright {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .contacts-item {
@@ -369,6 +467,8 @@ body {
   background-image: url("../img/youtube.svg");
   opacity: 0.3;
 }
+
+
 
 
 
@@ -612,3 +712,7 @@ body {
   background-repeat: space;
 
 }
+
+
+/* <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a
+href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS. Профессиональная вёрстка сайтов</a>».</p> */
