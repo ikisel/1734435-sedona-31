@@ -219,6 +219,7 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(4, min-content);
+   outline: 5px solid olive;
    list-style: none;
    margin: 0;
    padding: 0;
@@ -234,40 +235,59 @@
  .features-nature-item {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-
+   grid-template-rows: repeat(2, 1fr);
+   outline: 5px solid orchid;
  }
 
  .features-town-item .features-photo {
    grid-column: 2/4;
-   grid-row: 1/2;
+   grid-row: 1/3;
+   outline: 10px solid yellow;
  }
 
  .features-town-item .features-title {
    grid-column: 1/2;
    grid-row: 1/2;
-
+   outline: 5px solid brown;
  }
 
- .features-town-item .features-description {
+ .features-town-item .features-description-item {
+   grid-column: 1/2;
+   grid-row: 2/3;
+ }
+
+ .features-town-item {
    grid-column: 1/2;
    grid-row: 1/2;
+   outline: 5px solid orangered;
  }
 
  .features-nature-item .features-photo {
    grid-column: 1/3;
-   grid-row: 1/2;
+   grid-row: 1/3;
+   outline: 10px solid rebeccapurple;
+ }
 
+ .features-nature-item .features-description-item {
+   grid-column: 3/4;
+   grid-row: 2/3;
+ }
+
+ .features-nature-item .features-title {
+   grid-column: 3/4;
+   grid-row: 2/3;
  }
 
  .features-town {
    grid-column: 1/-1;
    grid-row: 1/2;
-
+   outline: 8px solid purple;
  }
 
  .features-nature {
    grid-column: 1/-1;
    grid-row: 3/4;
+   outline: 8px solid royalblue;
  }
 
  .features-photo {
@@ -291,21 +311,25 @@
    list-style: none;
    margin: 0;
    padding: 0;
+   outline: 5px solid saddlebrown;
  }
 
  .advantages-list-item:nth-child(3) {
    grid-column: 1/2;
    grid-row: 4/5;
+   outline: 5px solid springgreen;
  }
 
  .advantages-list-item:nth-child(4) {
    grid-column: 2/3;
    grid-row: 4/5;
+   outline: 5px solid peru;
  }
 
  .advantages-list-item:last-child {
    grid-column: 3/4;
    grid-row: 4/5;
+   outline: 5px solid orchid;
  }
 
  .advantages-list-item:nth-child(3),
