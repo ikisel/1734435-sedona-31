@@ -579,6 +579,11 @@
    outline: 6px solid yellowgreen;
  }
 
+ .sorting-list {
+   display: flex;
+   flex-direction: row;
+ }
+
  .sorting-results {
    display: flex;
    flex-direction: column;
@@ -603,13 +608,45 @@
 
  .sorting-results-item-description {
    display: grid;
-   grid-template-columns: repeat(236px 1fr 1fr);
+   grid-template-columns: repeat(236px min-content min-content);
    grid-template-rows: repeat(3, min-content);
+   outline: 5px solid burlywood;
+ }
+
+ .sorting-results-title {
+   grid-column: 2/4;
+   grid-row: 1/2;
+   outline: 5px solid orangered;
  }
 
  .sorting-results-photo {
    grid-column: 1/2;
    grid-row: 1/4;
+   outline: 5px solid orangered;
+ }
+
+ .rating-title-item {
+   grid-column: 2/3;
+   grid-row: 2/3;
+   outline: 5px solid orangered;
+ }
+
+ .rating-title-item-price {
+   grid-column: 3/4;
+   grid-row: 2/3;
+   outline: 5px solid orangered;
+ }
+
+ .booking-details {
+   grid-column: 2/3;
+   grid-row: 3/4;
+   outline: 5px solid orangered;
+ }
+
+ .booking-button {
+   grid-column: 3/4;
+   grid-row: 3/4;
+   outline: 5px solid orangered;
  }
 
  .sorting-title {
