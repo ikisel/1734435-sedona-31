@@ -667,7 +667,7 @@
    outline: 5px solid orangered;
  }
 
- .booking-button {
+ .booking-button-details {
    grid-column: 3/4;
    grid-row: 3/4;
    outline: 5px solid orangered;
