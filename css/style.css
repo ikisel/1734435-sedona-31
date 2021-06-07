@@ -65,17 +65,17 @@
 
  .page-header {
    grid-area: page-header;
-   outline: 3px solid red;
+
  }
 
  .main-container {
    grid-area: main-container;
-   outline: 3px solid green;
+
  }
 
  .page-footer {
    grid-area: page-footer;
-   outline: 3px solid pink;
+
  }
 
  .page {
@@ -219,7 +219,6 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(4, min-content);
-   outline: 5px solid olive;
    list-style: none;
    margin: 0;
    padding: 0;
@@ -236,19 +235,16 @@
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(2, 1fr);
-   outline: 5px solid orchid;
  }
 
  .features-town-item .features-photo {
    grid-column: 2/4;
    grid-row: 1/3;
-   outline: 10px solid yellow;
  }
 
  .features-town-item .features-title {
    grid-column: 1/2;
    grid-row: 1/2;
-   outline: 5px solid brown;
  }
 
  .features-town-item .features-description-item {
@@ -259,13 +255,13 @@
  .features-town-item {
    grid-column: 1/2;
    grid-row: 1/2;
-   outline: 5px solid orangered;
+
  }
 
  .features-nature-item .features-photo {
    grid-column: 1/3;
    grid-row: 1/3;
-   outline: 10px solid rebeccapurple;
+
  }
 
  .features-nature-item .features-description-item {
@@ -281,13 +277,13 @@
  .features-town {
    grid-column: 1/-1;
    grid-row: 1/2;
-   outline: 8px solid purple;
+
  }
 
  .features-nature {
    grid-column: 1/-1;
    grid-row: 3/4;
-   outline: 8px solid royalblue;
+
  }
 
  .features-photo {
@@ -311,25 +307,25 @@
    list-style: none;
    margin: 0;
    padding: 0;
-   outline: 5px solid saddlebrown;
+
  }
 
  .advantages-list-item:nth-child(3) {
    grid-column: 1/2;
    grid-row: 4/5;
-   outline: 5px solid springgreen;
+
  }
 
  .advantages-list-item:nth-child(4) {
    grid-column: 2/3;
    grid-row: 4/5;
-   outline: 5px solid peru;
+
  }
 
  .advantages-list-item:last-child {
    grid-column: 3/4;
    grid-row: 4/5;
-   outline: 5px solid orchid;
+
  }
 
  .advantages-list-item:nth-child(3),
@@ -595,12 +591,12 @@
 
  .filter {
    grid-area: filter;
-   outline: 5px solid yellow;
+
  }
 
  .sorting {
    grid-area: sorting;
-   outline: 6px solid yellowgreen;
+
  }
 
  .sorting-list {
@@ -614,7 +610,7 @@
  }
 
  .sorting-results-item {
-   outline: 3px solid rebeccapurple;
+
    display: grid;
    grid-template-columns: 684px 1fr 228px;
    grid-template-rows: repeat(3, min-content);
@@ -622,55 +618,55 @@
 
  .sorting-results-item-description {
    grid-column: 1/2;
-   outline: 5px solid red;
+
  }
 
  .sorting-results-item-rating {
    grid-column: -1/-2;
-   outline: 5px solid red;
+
  }
 
  .sorting-results-item-description {
    display: grid;
    grid-template-columns: repeat(236px min-content min-content);
    grid-template-rows: repeat(3, min-content);
-   outline: 5px solid burlywood;
+
  }
 
  .sorting-results-title {
    grid-column: 2/4;
    grid-row: 1/2;
-   outline: 5px solid orangered;
+
  }
 
  .sorting-results-photo {
    grid-column: 1/2;
    grid-row: 1/4;
-   outline: 5px solid orangered;
+
  }
 
  .rating-title-item {
    grid-column: 2/3;
    grid-row: 2/3;
-   outline: 5px solid orangered;
+
  }
 
  .rating-title-item-price {
    grid-column: 3/4;
    grid-row: 2/3;
-   outline: 5px solid orangered;
+
  }
 
  .booking-details {
    grid-column: 2/3;
    grid-row: 3/4;
-   outline: 5px solid orangered;
+
  }
 
  .booking-button-details {
    grid-column: 3/4;
    grid-row: 3/4;
-   outline: 5px solid orangered;
+
  }
 
  .sorting-title {
