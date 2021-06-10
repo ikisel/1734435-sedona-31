@@ -47,7 +47,6 @@
  }
 
  .page-body {
-   align-content: start;
    min-width: 1200px;
    min-height: 100vh;
    margin: 0;
@@ -72,6 +71,7 @@
  .page-container {
    display: grid;
    grid-template-rows: min-content 1fr min-content;
+   align-content: start;
  }
 
  .page-header {
@@ -398,7 +398,7 @@
 
  .booking-modal-form {
    position: absolute;
-   top: 116px;
+   top: 30px;
    left: auto;
  }
 
