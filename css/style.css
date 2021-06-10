@@ -201,6 +201,7 @@
  }
 
  /* стили для секции advantages */
+
  .advantages {
    margin-bottom: 58px;
  }
@@ -218,92 +219,17 @@
    text-align: center;
  }
 
- .advantages-list {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   grid-template-rows: repeat(4, min-content);
-   list-style: none;
-   margin: 0;
-   padding: 0;
- }
-
- .features {
-   background-color: var(--basic-light-blue);
-   color: var(--basic-white);
- }
-
- .features-description {
-   margin: 0;
-   padding: 0;
- }
-
- .features-town-item,
- .features-nature-item {
-   display: grid;
-   grid-template-columns: 400px 1fr 1fr;
-   grid-template-rows: repeat(2, 1fr);
- }
-
- .features-town-item .features-photo {
-   grid-column: 2/4;
-   grid-row: 1/3;
- }
-
- .features-town-item .features-title {
-   grid-column: 1/2;
-   grid-row: 1/2;
-   margin-top: 47px;
-   margin-left: 139px;
-   margin-right: 139px;
- }
-
- .features-town-item .features-description-item {
-   grid-column: 1/2;
-   grid-row: 2/3;
-   text-align: center;
-   margin-top: 35px;
-   margin-left: 49px;
-   margin-right: 48px;
- }
-
- .features-town-item {
-   grid-column: 1/2;
-   grid-row: 1/2;
-
- }
-
- .features-nature-item .features-photo {
-   grid-column: 1/3;
-   grid-row: 1/3;
-
- }
-
- .features-nature-item .features-description-item {
-   grid-column: 3/4;
-   grid-row: 2/3;
- }
-
- .features-nature-item .features-title {
-   grid-column: 3/4;
-   grid-row: 2/3;
- }
-
- .features-town {
-   grid-column: 1/-1;
-   grid-row: 1/2;
-
- }
-
- .features-nature {
-   grid-column: 1/-1;
-   grid-row: 3/4;
+ .advantages-list-item:nth-child(3),
+ .advantages-list-item:nth-child(4),
+ .advantages-list-item:last-child {
+   background-color: var(--basic-light-grey);
 
  }
 
  .features-photo {
    display: block;
-   width: 800px;
-   height: 256px;
+   width: 100%;
+   min-height: 256px;
    background-color: var(--basic-light-blue);
  }
 
@@ -312,8 +238,76 @@
    line-height: 21px;
    font-weight: 700;
    text-align: center;
+ }
+
+ .advantages-list {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(3, min-content);
+   list-style: none;
+   counter-reset: section;
    margin: 0;
    padding: 0;
+
+ }
+
+ .advantages-list-item {
+   counter-increment: section;
+ }
+
+ .features-description-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   position: relative;
+   padding: 5px;
+ }
+
+ .features-title-item::after {
+   position: absolute;
+   top: calc(50% - 17px);
+   left: 175px;
+   content: "— №"counter(section) " —";
+ }
+
+ .features-description {
+   padding-left: 10px;
+   padding-right: 10px;
+   text-align: center;
+
+ }
+
+ .features-town {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, min-content);
+   grid-column: 1/-1;
+   grid-row: 1/2;
+
+ }
+
+ .features-nature {
+   grid-column: 1/-1;
+   grid-row: 2/3;
+
+ }
+
+ .features-nature-item {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: min-content;
+ }
+
+ .features-nature-item .features-photo {
+   grid-column: 1/3;
+   grid-row: 1/2;
+
+ }
+
+ .features-nature-item .features-description-item {
+   grid-column: 3/4;
+   grid-row: 1/2;
  }
 
  .features-list {
@@ -327,106 +321,99 @@
 
  }
 
+ .features-town-item {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column: 1/-1;
+   grid-row: 1/2;
 
- .features-description-item {
-   position: relative;
  }
 
- .features-town-item>.features-description-item::before {
-   content: "— №1 —";
-   position: absolute;
-   top: calc(50% - 90px);
-   left: 130px;
+ .features-town-item .features-photo {
+   grid-column: 2/4;
+
+ }
+
+ .features-town-item .features-description-item {
+   grid-column: 1/2;
+
  }
 
  .advantages-list-item:nth-child(3) {
    grid-column: 1/2;
-   grid-row: 4/5;
+   grid-row: 3/4;
 
  }
 
  .advantages-list-item:nth-child(4) {
    grid-column: 2/3;
-   grid-row: 4/5;
+   grid-row: 3/4;
 
  }
 
  .advantages-list-item:last-child {
    grid-column: 3/4;
-   grid-row: 4/5;
+   grid-row: 3/4;
 
  }
 
- .advantages-list-item:nth-child(3),
- .advantages-list-item:nth-child(4),
- .advantages-list-item:last-child {
-   background-color: var(--basic-light-grey);
 
+ .features {
+   background-color: var(--basic-light-blue);
+   color: var(--basic-white);
  }
 
+ .features-list-item {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+
+ }
 
  .features-list-item:first-child,
  .features-list-item:nth-child(2),
  .features-list-item:last-child {
    position: relative;
-   height: 330px;
+
  }
 
  .features-list-item:first-child>.features-title::before {
    content: "";
    position: absolute;
-   top: 10px;
-   left: 10px;
+   top: -70px;
+   left: 160px;
    width: 75px;
    height: 72px;
    background-image: url("../img/icon-hotel.svg");
 
  }
 
- .features-list-item:first-child>.features-title {
-   margin-top: 28px;
-   margin-left: 165px;
-   margin-right: 167px;
-   margin-bottom: 25px;
- }
-
  .features-list-item:nth-child(2)>.features-title::before {
    content: "";
    position: absolute;
-   top: 10px;
-   left: 10px;
+   top: -70px;
+   left: 160px;
    width: 75px;
    height: 70px;
    background-image: url("../img/icon-food.svg");
 
  }
 
- .features-list-item:nth-child(2)>.features-title {
-   margin-top: 28px;
-   margin-left: 165px;
-   margin-right: 167px;
-   margin-bottom: 25px;
- }
-
  .features-list-item:last-child>.features-title::before {
    content: "";
    position: absolute;
-   top: 10px;
-   left: 10px;
+   top: -70px;
+   left: 160px;
    width: 64px;
    height: 77px;
    background-image: url("../img/icon-gift.svg");
 
  }
 
- .features-list-item:last-child>.features-title {
-   margin-top: 28px;
-   margin-left: 165px;
-   margin-right: 167px;
-   margin-bottom: 25px;
- }
 
  /* стили для секции booking */
+
  .booking {
    position: relative;
    margin-left: 316px;
@@ -454,8 +441,13 @@
  }
 
  .booking-button-modal {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    width: 568px;
    height: 86px;
+   list-style: none;
+
  }
 
  .booking-button {
@@ -476,8 +468,9 @@
  }
 
  .booking-button:active {
+   color: var(--neutral-white);
    background-color: var(--special-dark);
-   color: var(--basic-white);
+
  }
 
  .booking-form-description {
@@ -539,12 +532,14 @@
  }
 
  .map-photo {
-   display: block;
+   display: inline-block;
    width: 1199px;
    height: 594px;
+   vertical-align: middle;
  }
 
  /* стили для footer */
+
  .page-footer {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -815,18 +810,6 @@
 
  }
 
- .booking-details {
-   grid-column: 2/3;
-   grid-row: 3/4;
-
- }
-
- .booking-button-details {
-   grid-column: 3/4;
-   grid-row: 3/4;
-   width: 142px;
- }
-
  .sorting-title {
    font-size: 21px;
    line-height: 26px;
@@ -943,6 +926,8 @@
  }
 
  .booking-details {
+   grid-column: 2/3;
+   grid-row: 3/4;
    width: 110px;
    background-color: var(--basic-light-blue);
  }
@@ -958,19 +943,12 @@
    background-color: var(--basic-dark-blue);
  }
 
- .booking-button {
 
-   background-color: var(--special-light);
- }
+ .booking-button-details {
+   grid-column: 3/4;
+   grid-row: 3/4;
+   width: 142px;
 
- .booking-button:hover,
- .booking-button:focus {
-   background-color: var(--special);
- }
-
- .booking-button:active {
-   color: var(--neutral-white);
-   background-color: var(--special-dark);
  }
 
  .rating-description {
