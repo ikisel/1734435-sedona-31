@@ -238,6 +238,7 @@
    line-height: 21px;
    font-weight: 700;
    text-align: center;
+
  }
 
  .advantages-list {
@@ -256,18 +257,13 @@
  }
 
  .features-description-item {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-   position: relative;
    padding: 5px;
  }
 
  .features-title-item::after {
-   position: absolute;
-   top: calc(50% - 17px);
-   left: 175px;
+   display: block;
+   margin: 0 auto;
+   margin-top: 25px;
    content: "— №"counter(section) " —";
  }
 
@@ -363,50 +359,34 @@
    color: var(--basic-white);
  }
 
- .features-list-item {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-
- }
-
- .features-list-item:first-child,
- .features-list-item:nth-child(2),
- .features-list-item:last-child {
-   position: relative;
-
- }
-
  .features-list-item:first-child>.features-title::before {
    content: "";
-   position: absolute;
-   top: -70px;
-   left: 160px;
+   display: block;
    width: 75px;
    height: 72px;
+   margin: 0 auto;
    background-image: url("../img/icon-hotel.svg");
-
+   margin-bottom: 28px;
  }
 
  .features-list-item:nth-child(2)>.features-title::before {
    content: "";
-   position: absolute;
-   top: -70px;
-   left: 160px;
+   display: block;
    width: 75px;
    height: 70px;
+   margin: 0 auto;
+   margin-bottom: 28px;
    background-image: url("../img/icon-food.svg");
 
  }
 
  .features-list-item:last-child>.features-title::before {
    content: "";
-   position: absolute;
-   top: -70px;
-   left: 160px;
+   display: block;
    width: 64px;
    height: 77px;
+   margin: 0 auto;
+   margin-bottom: 28px;
    background-image: url("../img/icon-gift.svg");
 
  }
