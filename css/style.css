@@ -506,12 +506,16 @@
    color: var(--neutral-white);
  }
 
+ .map-container {
+   display: block;
+ }
+
  .map-photo {
-   display: inline-block;
+   display: block;
    width: 1199px;
    height: 594px;
-   vertical-align: middle;
  }
+
 
  /* стили для footer */
 
@@ -634,6 +638,26 @@
 
 
  /* стили для каталога */
+ .center {
+   width: 1054px;
+   margin: 0 auto;
+ }
+
+ .catalog-container {
+   display: grid;
+   grid-template-rows: min-content min-content;
+   align-content: start;
+ }
+
+ .filter {
+   grid-row: 1/2;
+
+ }
+
+ .sorting {
+   grid-row: 2/3;
+
+ }
 
  /* стили для секции filter */
 
@@ -651,7 +675,6 @@
    display: inline-block;
    border: none;
    margin: 0;
-   margin-left: 72px;
    padding: 0;
  }
 
@@ -667,6 +690,8 @@
  .sorting-list,
  .scrolling-list,
  .sorting-results {
+   margin: 0;
+   padding: 0;
    list-style: none;
  }
 
@@ -677,35 +702,81 @@
  }
 
  .services-list-item-description {
-   display: inline-block;
    text-align: center;
    color: var(--basic-white);
  }
 
  /* cтили для секции sorting */
- .catalog-container {
-   display: grid;
-   grid-template-rows: min-content min-content;
-   grid-template-areas:
-     "filter"
-     "sorting";
+
+ .sorting-container {
+   margin-bottom: 30px;
  }
 
- .filter {
-   grid-area: filter;
+ .sorting-results {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
  }
 
- .sorting {
-   grid-area: sorting;
+ .sorting-results-item {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid var(--basic-neutral);
+ }
 
+ .sorting-results-item:first-child {
+   border-top: 1px solid var(--basic-neutral);
+ }
+
+ .sorting-results-item-rating {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: space-evenly;
+   margin: 0;
+   padding: 0;
+
+ }
+
+ .rating-wrapper {
+   order: 1;
+ }
+
+ .sorting-results-item-description {
+   display: grid;
+   grid-template-columns: min-content 1fr 1fr;
+   grid-template-rows: repeat(3, min-content);
+ }
+
+ .sorting-results-title {
+   grid-column: 2/4;
+   grid-row: 1/2;
+   margin: 0;
+   color: var(--basic-black);
+   text-decoration: none;
+ }
+
+ .sorting-results-photo {
+   grid-column: 1/2;
+   grid-row: 1/4;
+   place-self: center;
+   margin-right: 28px;
+ }
+
+ .rating-title-item {
+   grid-column: 2/3;
+   grid-row: 2/3;
+   margin: 0;
+ }
+
+ .rating-title-item-price {
+   grid-column: 3/4;
+   grid-row: 2/3;
+   margin: 0;
  }
 
  .scrolling-list {
    margin: auto;
    padding: 0;
-
  }
 
  .sorting-container {
@@ -715,11 +786,6 @@
  .sorting-container-inner {
    display: flex;
 
- }
-
- .sorting-container-inner>.sorting-title {
-   margin-left: 73px;
-   margin-right: 46px;
  }
 
  .sorting-list {
@@ -734,58 +800,6 @@
 
  .sorting-description {
    margin: auto;
- }
-
- .sorting-results {
-   display: flex;
-   flex-direction: column;
- }
-
- .sorting-results-item {
-   display: grid;
-   grid-template-columns: 684px 1fr 228px;
-   grid-template-rows: repeat(3, min-content);
- }
-
- .sorting-results-item-description {
-   grid-column: 1/2;
-
- }
-
- .sorting-results-item-rating {
-   grid-column: -1/-2;
-
- }
-
- .sorting-results-item-description {
-   display: grid;
-   grid-template-columns: repeat(236px min-content min-content);
-   grid-template-rows: repeat(3, min-content);
-
- }
-
- .sorting-results-title {
-   grid-column: 2/4;
-   grid-row: 1/2;
-
- }
-
- .sorting-results-photo {
-   grid-column: 1/2;
-   grid-row: 1/4;
-   place-self: center;
- }
-
- .rating-title-item {
-   grid-column: 2/3;
-   grid-row: 2/3;
-
- }
-
- .rating-title-item-price {
-   grid-column: 3/4;
-   grid-row: 2/3;
-
  }
 
  .sorting-title {
@@ -870,11 +884,6 @@
 
  }
 
- .sorting-results-title {
-   color: var(--basic-black);
-   text-decoration: none;
- }
-
  .sorting-results-title:hover,
  .sorting-results-title:focus {
    color: var(--basic-light-blue);
@@ -931,6 +940,7 @@
 
  .rating-description {
    display: inline-block;
+   margin: 0;
    color: var(--special-grey);
    background-color: var(--basic-light);
 
@@ -949,6 +959,7 @@
  .number-stars-hotel::after {
    content: "";
    position: absolute;
+   left: 6px;
    width: 90px;
    height: 17px;
    background-image: url("../img/star.svg");
@@ -958,12 +969,13 @@
 
  .number-stars-motel {
    position: relative;
-   padding-bottom: 10px;
+
  }
 
  .number-stars-motel::after {
    content: "";
    position: absolute;
+   left: 26px;
    width: 70px;
    height: 17px;
    background-image: url("../img/star.svg");
@@ -973,12 +985,13 @@
 
  .number-stars-apartments {
    position: relative;
-   padding-bottom: 10px;
+
  }
 
  .number-stars-apartments::after {
    content: "";
    position: absolute;
+   left: 51px;
    width: 45px;
    height: 17px;
    background-image: url("../img/star.svg");
