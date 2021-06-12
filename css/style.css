@@ -512,6 +512,8 @@
   display: grid;
   gap: 6px;
   grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
 }
 
 .footer-copyright {
@@ -608,10 +610,8 @@
 }
 
 .copyright-description {
-  margin: 0;
-  padding: 0;
+  text-align: center;
 }
-
 
 
 
@@ -633,6 +633,7 @@
 
 .sorting {
   grid-row: 2/3;
+  margin-bottom: 36px;
 }
 
 /* стили для секции filter */
