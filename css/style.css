@@ -30,6 +30,7 @@
   --basic-extra-grey: #BDBBBC;
   --basic-medium-grey: #A9A9A9;
   --special-medium-grey: #EBEBEB;
+  --special-light-grey: #ABABAB;
   --special-grey: #666666;
   --special-light: #766357;
   --special: #604E43;
@@ -39,6 +40,7 @@
   --neutral-white: rgba(255, 255, 255, 0.3);
   --neutral-light-white: rgba(255, 255, 255, 0.9);
   --neutral-black: rgba(0, 0, 0, 0.3);
+  --neutral-light-grey: rgba(171, 171, 171, 0.3);
 }
 
 .page {
@@ -438,7 +440,8 @@
 .booking-form-description {
   display: block;
   align-self: center;
-  /* padding-right: 24px; */
+  white-space: nowrap;
+  padding-right: 24px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
@@ -448,9 +451,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  text-align: center;
   width: 568px;
-  height: 395px;
   padding-top: 55px;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--special-shadow-black);
@@ -461,9 +462,10 @@
   margin-top: 0;
   width: 458px;
   margin-bottom: 30px;
-  /* margin-bottom: 30px;
-  margin-left: 55px;
-  text-align: start; */
+}
+
+.booking-form-wrapper:nth-of-type(3) {
+  margin-bottom: 55px;
 }
 
 .booking-form-wrapper input[type="text"],
@@ -485,8 +487,7 @@
 }
 
 .booking-form-wrapper input[type="number"] {
-  width: 114px;
-
+  text-align: center;
 }
 
 .booking-form-wrapper input[type="number"]::-webkit-outer-spin-button,
@@ -511,7 +512,31 @@
   outline: none;
 }
 
-button-calendar {
+.button-calendar,
+.button-back,
+.button-next {
+  position: relative;
+  background-color: var(--basic-light);
+  border: none;
+}
+
+.button-calendar:hover,
+.button-calendar:focus,
+.button-back:hover,
+.button-back:focus .button-next:hover,
+.button-back:focus {
+  background-color: var(--special-medium-grey);
+}
+
+.button-calendar:active,
+.button-back:active,
+.button-next:active {
+  background-color: var(--basic-neutral);
+}
+
+.button-calendar::before {
+  content: "";
+  display: block;
   width: 21px;
   height: 23px;
   background: var(--basic-medium-grey);
@@ -521,7 +546,44 @@ button-calendar {
   mask-size: cover;
 }
 
+.button-back::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 3px;
+  background: var(--basic-medium-grey);
+  mask-image: url("../img/down.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
 
+.button-next::before {
+  content: "";
+  display: block;
+  width: 11px;
+  height: 11px;
+  background: var(--basic-medium-grey);
+  mask-image: url("../img/up.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+.button-calendar:hover::before,
+.button-calendar:focus::before,
+.button-back:hover::before,
+.button-back:focus::before,
+.button-next:hover::before,
+.button-next:focus::before {
+  background: var(--basic-black);
+}
+
+.button-calendar:active::before,
+.button-back:active::before,
+.button-next:active::before {
+  background: var(--basic-light-blue);
+}
 
 .button-search {
   display: block;
@@ -529,6 +591,7 @@ button-calendar {
   height: 58px;
   padding-top: 16px;
   padding-bottom: 16px;
+  margin-bottom: 55px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -703,6 +766,19 @@ button-calendar {
   padding: 0;
 }
 
+.filter-price {
+  margin-top: 26px;
+}
+
+.range-filter {
+  width: 317px;
+  margin-top: 10px;
+}
+
+.price-controls {
+  margin-bottom: 20px;
+}
+
 .fieldset-title {
   font-size: 16px;
   line-height: 21px;
@@ -720,7 +796,7 @@ button-calendar {
   list-style: none;
 }
 
-.price-wrapper input[type="number"],
+.price-controls input[type="number"],
 .button-show {
   background-color: transparent;
   color: var(--basic-white);
@@ -730,6 +806,48 @@ button-calendar {
   text-align: center;
   color: var(--basic-white);
 }
+
+.range-controls {
+  position: relative;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: var(--neutral-white);
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+  background: var(--basic-white);
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid var(--basic-white);
+  background-color: var(--special-light-grey);
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 var(--neutral-light-grey);
+}
+
+.range-controls .toggle-max {
+  left: 220px;
+}
+
+.price-controls input {
+  width: 155px;
+  padding: 10px;
+  margin-left: 50px;
+  text-align: center;
+  border: 2px solid var(--basic-white);
+}
+
+
 
 /* cтили для секции sorting */
 

@@ -72,17 +72,21 @@
           </fieldset>
           <fieldset class="filter-price">
             <legend class="fieldset-title">Стоимость в сутки, ₽:</legend>
-            <p class="price-wrapper">
-              <label class="services-list-item-description" for="price-min">От</label>
-              <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
-            </p>
-            <p class="price-wrapper">
-              <label class="services-list-item-description" for="price-max">До</label>
-              <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
-            </p>
-
-            <!-- тут будет двухползунковый слайдер -->
-
+            <div class="range-filter">
+              <div class="price-controls">
+                <label class="services-list-item-description" for="price-min">От</label>
+                <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
+                <label class="services-list-item-description" for="price-max">До</label>
+                <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
+              </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+            </div>
           </fieldset>
           <button class="button button-show services-list-item-description" type="submit">Показать</button>
         </form>
