@@ -71,20 +71,20 @@
             </ul>
           </fieldset>
           <fieldset class="filter-price">
-            <legend class="fieldset-title">Стоимость в сутки, ₽:</legend>
+            <legend class="fieldset-title">Стоимость в сутки, &#8381;:</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="services-list-item-description" for="price-min">От</label>
+                <label class="services-list-item-description price-value" for="price-min">От</label>
                 <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
-                <label class="services-list-item-description" for="price-max">До</label>
+                <label class="services-list-item-description price-value" for="price-max">До</label>
                 <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
               </div>
               <div class="range-controls">
                 <div class="scale">
                   <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min"></div>
-                <div class="toggle toggle-max"></div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
             </div>
           </fieldset>
