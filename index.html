@@ -108,32 +108,38 @@
         <details open class="booking-modal-form">
           <summary class="button booking-button booking-button-modal">Поиск гостиницы в Седоне</summary>
           <form class="booking-form" action="https://echo.htmlacademy.ru" method="POST">
-            <p class="booking-form-wrapper">
-              <label class="booking-form-description" for="arrival-date">Дата заезда</label>
-              <input id="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017">
-              <button class="button button-calendar" type="button"><span class="visually-hidden">Показать
-                  календарь для выбора даты</span></button>
-            </p>
-            <p class="booking-form-wrapper">
-              <label class="booking-form-description" for="departure-date">Дата выезда</label>
-              <input id="departure-date" type="text" name="departure-date" placeholder="4 июля 2017">
-              <button class="button button-calendar" type="button"><span class="visually-hidden">Показать календарь для выбора
-                  даты</span></button>
-            </p>
-            <p class="booking-form-wrapper">
-              <label class="booking-form-description" for="adult">Взрослые</label>
-              <button class="button button-back" type="button"><span class="visually-hidden">Увеличить
+            <label class="booking-form-description date-in" for="arrival-date">Дата заезда</label>
+            <input class="booking-form-date-in" id="arrival-date" type="text" name="arrival-date"
+              placeholder="24 апреля 2017">
+            <button class="button button-calendar button-calendar-in" type="button"><span
+                class="visually-hidden">Показать
+                календарь для выбора даты</span></button>
+            <label class="booking-form-description date-out" for="departure-date">Дата выезда</label>
+            <input class="booking-form-date-out" id="departure-date" type="text" name="departure-date"
+              placeholder="4 июля 2017">
+            <button class="button button-calendar button-calendar-out" type="button"><span
+                class="visually-hidden">Показать календарь для выбора
+                даты</span></button>
+            <label class="booking-form-description booking-form-description-adult" for="adult">Взрослые</label>
+            <div class="wrapper-adult">
+              <button class="button button-back button-back-adult" type="button"><span class="visually-hidden">Уменьшить
                   значение</span></button>
-              <input type="number" name="adult" id="adult" min="1" max="10" step="1" value="2">
-              <button class="button button-next" type="button"><span class="visually-hidden">Увеличить
+              <input class="booking-form-adult" type="number" name="adult" id="adult" min="1" max="10" step="1"
+                value="2">
+              <button class="button button-next button-next-adult" type="button"><span class="visually-hidden">Увеличить
                   значение</span></button>
-              <label class="booking-form-description" for="children">Дети</label>
-              <button class="button button-back" type="button"><span class="visually-hidden">Увеличить
+            </div>
+            <label class="booking-form-description booking-form-description-children" for="children">Дети</label>
+            <div class="wrapper-children">
+              <button class="button button-back button-back-children" type="button"><span
+                  class="visually-hidden">Уменьшить
                   значение</span></button>
-              <input type="number" name="children" id="children" min="1" max="10" step="1" value="0">
-              <button class="button button-next" type="button"><span class="visually-hidden">Увеличить
+              <input class="booking-form-children" type="number" name="children" id="children" min="1" max="10" step="1"
+                value="0">
+              <button class="button button-next button-next-children" type="button"><span
+                  class="visually-hidden">Увеличить
                   значение</span></button>
-            </p>
+            </div>
             <button class="button button-search" type="submit">Найти</button>
           </form>
         </details>
