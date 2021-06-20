@@ -553,7 +553,7 @@
 .wrapper-adult input::-webkit-outer-spin-button,
 .wrapper-adult input::-webkit-inner-spin-button,
 .wrapper-children input::-webkit-outer-spin-button,
-.wrapper-children input::-webkit-outer-spin-button {
+.wrapper-children input::-webkit-inner-spin-button {
   appearance: none;
 }
 
@@ -569,6 +569,8 @@
   color: inherit;
   background-color: var(--basic-white);
   outline: 2px solid var(--basic-neutral);
+  outline-offset: -2px;
+
 }
 
 .button-calendar,
