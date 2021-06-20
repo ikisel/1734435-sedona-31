@@ -514,6 +514,11 @@
   margin-bottom: 54px;
 }
 
+.booking-form-adult,
+.booking-form-children {
+  width: 75px;
+}
+
 .booking-form-description-children {
   grid-column: 3/4;
   grid-row: 3/4;
@@ -553,20 +558,18 @@
 }
 
 .booking-form input[type="text"]:hover,
-.booking-form input[type="text"]:focus,
-.booking-form input[type="number"]:hover,
-.booking-form input[type="number"]:focus {
+.booking-form input[type="number"]:hover {
   color: inherit;
   background-color: var(--special-medium-grey);
   outline: none;
 }
 
-/* input[type="text"]:focus,
-input[type="number"]:focus {
+.booking-form input[type="text"]:focus,
+.booking-form input[type="number"]:focus {
   color: inherit;
-  background-color: var(--basic-neutral);
-  outline: none;
-} */
+  background-color: var(--basic-white);
+  outline: 2px solid var(--basic-neutral);
+}
 
 .button-calendar,
 .button-back,
