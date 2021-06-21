@@ -550,9 +550,7 @@
   appearance: textfield;
 }
 
-.wrapper-adult input::-webkit-outer-spin-button,
 .wrapper-adult input::-webkit-inner-spin-button,
-.wrapper-children input::-webkit-outer-spin-button,
 .wrapper-children input::-webkit-inner-spin-button {
   appearance: none;
 }
@@ -586,7 +584,7 @@
 .button-back:hover,
 .button-back:focus,
 .button-next:hover,
-.button-back:focus {
+.button-next:focus {
   background-color: var(--special-medium-grey);
   outline: none;
 }
@@ -861,7 +859,6 @@
   bottom: 7px;
   left: 50%;
   width: 2px;
-  margin-right: 1px;
   background-color: var(--basic-white);
 }
 
@@ -881,7 +878,6 @@
   border: none;
 }
 
-.price-controls input::-webkit-outer-spin-button,
 .price-controls input::-webkit-inner-spin-button {
   appearance: none;
 }
@@ -1060,19 +1056,18 @@
 }
 
 .sorting-list-item {
-  margin-right: 35px;
-}
-
-.sorting-description {
-  margin: auto;
+  margin-right: 30px;
 }
 
 .sorting-title {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  margin-right: 46px;
+}
+
+.sorting-title-search {
   margin-top: 0;
+  margin-right: 46px;
 }
 
 .sorting-description {
@@ -1080,8 +1075,7 @@
   line-height: 18px;
   font-weight: 400;
   margin-top: 2px;
-  margin-right: 46px;
-  align-self: baseline;
+  margin-right: 40px;
 }
 
 .sorting-link {
