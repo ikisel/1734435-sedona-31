@@ -570,7 +570,15 @@
   background-color: var(--basic-white);
   outline: 2px solid var(--basic-neutral);
   outline-offset: -2px;
+  margin-right: -2px;
+}
 
+.booking-form input[type="number"]:focus {
+  margin-left: -2px;
+}
+
+.booking-form input[type="text"]:focus {
+  margin-top: -2px;
 }
 
 .button-calendar,
@@ -671,6 +679,7 @@
 .button-search:hover,
 .button-search:focus {
   background-color: var(--basic-blue);
+  outline: none;
 }
 
 .button-search:active {
