@@ -40,16 +40,16 @@
             <legend class="fieldset-title">Инфраструктура:</legend>
             <ul class="services-list">
               <li class="services-list-item">
-                <input type="checkbox" name="infrastructure" value="pool" id="filter-pool" checked>
-                <label class="services-list-item-description" for="filter-pool">Бассейн</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="pool" id="filter-pool" checked>
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-pool">Бассейн</label>
               </li>
               <li class="services-list-item">
-                <input type="checkbox" name="infrastructure" value="parking" id="filter-parking">
-                <label class="services-list-item-description" for="filter-parking">Парковка</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="parking" id="filter-parking">
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-parking">Парковка</label>
               </li>
               <li class="services-list-item">
-                <input type="checkbox" name="infrastructure" value="wi-fi" id="filter-wi-fi">
-                <label class="services-list-item-description" for="filter-wi-fi">Wi-Fi</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="wi-fi" id="filter-wi-fi">
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-wi-fi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
@@ -57,16 +57,16 @@
             <legend class="fieldset-title">Тип жилья:</legend>
             <ul class="hotel-class-list">
               <li class="hotel-class-list-item">
-                <input type="checkbox" name="hotel-type" value="hotel" id="filter-hotel" checked>
-                <label class="services-list-item-description" for="filter-hotel">Гостиница</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="hotel" id="filter-hotel" checked>
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-hotel">Гостиница</label>
               </li>
               <li class="hotel-class-list-item">
-                <input type="checkbox" name="hotel-type" value="motel" id="filter-motel" checked>
-                <label class="services-list-item-description" for="filter-motel">Мотель</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="motel" id="filter-motel" checked>
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-motel">Мотель</label>
               </li>
               <li class="hotel-class-list-item">
-                <input type="checkbox" name="hotel-type" value="apartments" id="filter-apartments" checked>
-                <label class="services-list-item-description" for="filter-apartments">Апартаменты</label>
+                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="apartments" id="filter-apartments" checked>
+                <label class="services-list-item-checkbox services-list-item-description" for="filter-apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -74,9 +74,9 @@
             <legend class="fieldset-title">Стоимость в сутки, &#8381;:</legend>
             <div class="range-filter">
               <div class="price-controls">
-                <label class="services-list-item-description price-value" for="price-min">От</label>
+                <label class="services-list-item-description price-value" for="price-min">От </label>
                 <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
-                <label class="services-list-item-description price-value" for="price-max">До</label>
+                <label class="services-list-item-description price-value" for="price-max">До </label>
                 <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
               </div>
               <div class="range-controls">
@@ -117,7 +117,7 @@
         <ul class="sorting-results">
           <li class="sorting-results-item">
             <div class="sorting-results-item-description">
-              <h3 class="sorting-title sorting-results-title"><a class="sorting-results-title" href="blank.html">Amara
+              <h3 class="sorting-title sorting-title-item"><a class="sorting-results-title" href="blank.html">Amara
                   Resort & Spa</a></h3>
               <a class="sorting-results-photo" href="blank.html"><img src="files/hotel-amara.jpg" width="135"
                   height="90" alt="Отель Amara Resort & Spa лужайка на фоне гор"></a>
@@ -141,7 +141,7 @@
           </li>
           <li class="sorting-results-item">
             <div class="sorting-results-item-description">
-              <h3 class="sorting-title sorting-results-title">
+              <h3 class="sorting-title sorting-title-item">
                 <a class="sorting-results-title" href="blank.html">Desert
                   Quail Inn</a></h3>
               <a class="sorting-results-photo" href="blank.html"><img src="files/motel-desert.jpg" width="135"
@@ -167,7 +167,7 @@
           </li>
           <li class="sorting-results-item">
             <div class="sorting-results-item-description">
-              <h3 class="sorting-title sorting-results-title"><a class="sorting-results-title" href="blank.html">Villas
+              <h3 class="sorting-title sorting-title-item"><a class="sorting-results-title" href="blank.html">Villas
                   at Poco Diablo</a></h3>
               <a class="sorting-results-photo" href="blank.html"><img src="files/apartments-villas.jpg" width="135"
                   height="90" alt="Аппартаменты Villas at Poco Diablo уютные домики, утопающие в зелени"></a>

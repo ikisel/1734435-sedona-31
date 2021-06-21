@@ -567,6 +567,9 @@
   color: inherit;
   background-color: var(--basic-white);
   outline: 2px solid var(--basic-neutral);
+}
+
+.booking-form input[type="number"]:focus {
   outline-offset: -2px;
 }
 
@@ -807,20 +810,33 @@
 }
 
 
-
 /* стили для каталога */
 
 /* стили для секции filter */
 
 .filter {
+  /* display: grid;
+  grid-template-columns: repeat(4, 1fr); */
   width: 100%;
-  height: 217px;
-  margin-bottom: 10px;
+  min-height: 217px;
   background-color: var(--basic-light-blue);
   background-image: url("../img/catalog-main-photo.jpg");
   background-repeat: no-repeat;
   margin-bottom: 29px;
+
 }
+
+/* .filter-services {
+  grid-column: 1/2;
+}
+
+.filter-hotel-class {
+  grid-column: 2/3;
+}
+
+.filter-price {
+  grid-column: 4/5;
+} */
 
 .filter-services,
 .filter-hotel-class,
@@ -830,12 +846,56 @@
   border: none;
   margin: 0;
   padding: 0;
-  padding-left: 73px;
+
+}
+
+.services-list-item-checkbox {
+  position: relative;
+  display: block;
+}
+
+.services-list-item,
+.hotel-class-list-item {
+  margin-bottom: 25px;
+}
+
+.filter-services-checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  border: 2px solid var(--basic-white);
+  border-radius: 4px;
+}
+
+.filter-services-checkbox:checked+label::after,
+.filter-services-checkbox:not(:checked)+label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -36px;
+  width: 13px;
+  height: 5px;
+  border-radius: 1px;
+  border-left: 4px solid var(--basic-white);
+  border-bottom: 4px solid var(--basic-white);
+  transform: rotate(-45deg);
+  transition: all 0.2s ease;
+}
+
+.filter-services-checkbox:not(:checked)+label::after {
+  opacity: 0;
+}
+
+.filter-services-checkbox:checked+label::after {
+  opacity: 1;
 }
 
 .filter-price {
   margin-top: 26px;
-  padding-right: 73px;
+
 }
 
 .range-filter {
@@ -890,6 +950,7 @@
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
+  margin-bottom: 24px;
   color: var(--basic-white);
 }
 
@@ -989,7 +1050,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
 }
@@ -1000,21 +1061,21 @@
 
 .sorting-results-item-description {
   display: grid;
-  grid-template-columns: min-content 1fr 1fr;
+  grid-template-columns: min-content 1fr min-content;
   grid-template-rows: repeat(3, min-content);
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
 .sorting-results-title {
-  grid-column: 2/4;
-  grid-row: 1/2;
-  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: var(--basic-black);
   text-decoration: none;
 }
 
 .sorting-results-photo {
+  display: block;
   width: 135px;
   height: 90px;
   grid-column: 1/2;
@@ -1027,16 +1088,17 @@
   grid-column: 2/3;
   grid-row: 2/3;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .rating-title-item-price {
   grid-column: 3/4;
   grid-row: 2/3;
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .scrolling-list {
-
   margin-top: 4px;
   padding: 0;
 }
@@ -1063,6 +1125,13 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
+
+.sorting-title-item {
+  grid-column: 2/4;
+  grid-row: 1/2;
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .sorting-title-search {
@@ -1164,7 +1233,6 @@
 
 .button-details {
   display: flex;
-  height: 27px;
   font-size: 14px;
   line-height: 21px;
   font-weight: 700;
@@ -1177,7 +1245,9 @@
 .booking-details {
   grid-column: 2/3;
   grid-row: 3/4;
-  width: 110px;
+  width: 79px;
+  padding: 3px 16px;
+  margin-right: 6px;
   background-color: var(--basic-light-blue);
 }
 
@@ -1196,6 +1266,7 @@
   grid-column: 3/4;
   grid-row: 3/4;
   width: 142px;
+  padding: 3px 16px;
 }
 
 .rating-description {
