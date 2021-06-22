@@ -35,60 +35,80 @@
       <h1 class="visually-hidden">город Седона - отдых и туризм</h1>
       <section class="filter">
         <h2 class="visually-hidden">Фильтр гостиниц Седоны</h2>
-        <form method="GET" action="https://echo.htmlacademy.ru">
-          <fieldset class="filter-services">
-            <legend class="fieldset-title">Инфраструктура:</legend>
-            <ul class="services-list">
-              <li class="services-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="pool" id="filter-pool" checked>
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-pool">Бассейн</label>
-              </li>
-              <li class="services-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="parking" id="filter-parking">
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-parking">Парковка</label>
-              </li>
-              <li class="services-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure" value="wi-fi" id="filter-wi-fi">
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-wi-fi">Wi-Fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filter-hotel-class">
-            <legend class="fieldset-title">Тип жилья:</legend>
-            <ul class="hotel-class-list">
-              <li class="hotel-class-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="hotel" id="filter-hotel" checked>
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-hotel">Гостиница</label>
-              </li>
-              <li class="hotel-class-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="motel" id="filter-motel" checked>
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-motel">Мотель</label>
-              </li>
-              <li class="hotel-class-list-item">
-                <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type" value="apartments" id="filter-apartments" checked>
-                <label class="services-list-item-checkbox services-list-item-description" for="filter-apartments">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="filter-price">
-            <legend class="fieldset-title">Стоимость в сутки, &#8381;:</legend>
-            <div class="range-filter">
-              <div class="price-controls">
-                <label class="services-list-item-description price-value" for="price-min">От </label>
-                <input type="number" name="price-min" id="price-min" value="0" min="0" max="100000" step="1">
-                <label class="services-list-item-description price-value" for="price-max">До </label>
-                <input type="number" name="price-max" id="price-max" value="3000" min="0" max="100000" step="1">
-              </div>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar"></div>
+        <form class="filter-form" method="GET" action="https://echo.htmlacademy.ru">
+          <div class="filter-services-wrapper">
+            <fieldset class="filter-services">
+              <legend class="fieldset-title">Инфраструктура:</legend>
+              <ul class="services-list">
+                <li class="services-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure"
+                    value="pool" id="filter-pool" checked>
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-pool">Бассейн</label>
+                </li>
+                <li class="services-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure"
+                    value="parking" id="filter-parking">
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-parking">Парковка</label>
+                </li>
+                <li class="services-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="infrastructure"
+                    value="wi-fi" id="filter-wi-fi" disabled>
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-wi-fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter-hotel-class-wrapper">
+            <fieldset class="filter-hotel-class">
+              <legend class="fieldset-title">Тип жилья:</legend>
+              <ul class="hotel-class-list">
+                <li class="hotel-class-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type"
+                    value="hotel" id="filter-hotel" checked>
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-hotel">Гостиница</label>
+                </li>
+                <li class="hotel-class-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type"
+                    value="motel" id="filter-motel" checked>
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-motel">Мотель</label>
+                </li>
+                <li class="hotel-class-list-item">
+                  <input class="filter-services-checkbox visually-hidden" type="checkbox" name="hotel-type"
+                    value="apartments" id="filter-apartments" checked disabled>
+                  <label class="services-list-item-checkbox services-list-item-description"
+                    for="filter-apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="filter-price-wrapper">
+            <fieldset class="filter-price">
+              <legend class="fieldset-title">Стоимость в сутки, &#8381;:</legend>
+              <div class="range-filter">
+                <div class="price-controls">
+                  <label class="services-list-item-description price-value" for="price-min">От </label>
+                  <input class="price-controls-number" type="number" name="price-min" id="price-min" value="0" min="0"
+                    max="100000" step="1">
+                  <label class="services-list-item-description price-value" for="price-max">До </label>
+                  <input class="price-controls-number" type="number" name="price-max" id="price-max" value="3000"
+                    min="0" max="100000" step="1">
                 </div>
-                <div class="toggle toggle-min" tabindex="0"></div>
-                <div class="toggle toggle-max" tabindex="0"></div>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
               </div>
-            </div>
-          </fieldset>
-          <button class="button button-show services-list-item-description" type="submit">Показать</button>
+            </fieldset>
+          </div>
+          <button class="button button-show" type="submit">Показать</button>
         </form>
       </section>
       <section class="sorting">
@@ -195,7 +215,7 @@
     <footer class="page-footer">
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <a class="contacts-item" href="blank.html">#visitSEDONA</a>
+        <a class="contacts-item contacts-item-hashtag" href="blank.html">#visitSEDONA</a>
         <a class="contacts-item contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
       </section>
       <section class="footer-social">
