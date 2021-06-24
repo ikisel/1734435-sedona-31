@@ -190,6 +190,7 @@
 
 .welcome {
   position: relative;
+  margin-bottom: 42px;
 }
 
 .welcome::after {
@@ -212,12 +213,14 @@
   line-height: 26px;
   font-weight: 700;
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .advantages-description {
   font-size: inherit;
   line-height: 26px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .advantages-list-item:nth-child(3),
@@ -255,12 +258,15 @@
 }
 
 .features-description-item {
-  padding: 5px;
+  padding: 25px;
 }
 
 .features-title-item::after {
   display: block;
   margin: 0 auto;
+  font-size: 14px;
+  line-height: 21px;
+  font-size: 400;
   margin-top: 25px;
   content: "— №"counter(section) " —";
 }
@@ -308,6 +314,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 68px;
 }
 
 .features-town-item {
@@ -328,6 +335,7 @@
 .advantages-list-item:nth-child(3) {
   grid-column: 1/2;
   grid-row: 3/4;
+  padding-bottom: 20px;
 }
 
 .advantages-list-item:nth-child(4) {
@@ -344,6 +352,10 @@
 .features {
   background-color: var(--basic-light-blue);
   color: var(--basic-white);
+}
+
+.features-list-item {
+  padding-top: 40px;
 }
 
 .features-list-item:first-child>.features-title::before {
@@ -387,7 +399,7 @@
 
 .booking-modal-form {
   position: absolute;
-  top: 166px;
+  top: 150px;
   left: auto;
 }
 
@@ -395,14 +407,14 @@
   font-size: 30px;
   line-height: 24px;
   font-weight: 700;
-  margin-bottom: 36px;
+  margin-bottom: 22px;
   text-align: center;
 }
 
 .booking-description {
   line-height: 24px;
   padding: 10px;
-  margin-bottom: 124px;
+  margin-bottom: 120px;
   text-align: center;
   color: var(--basic-dark-grey);
 }
@@ -724,7 +736,7 @@
   grid-column: 1/2;
   grid-row: 3/4;
   z-index: 10;
-  padding: 23px 73px;
+  padding: 32px 73px;
   background-color: var(--neutral-light-white);
 }
 
@@ -894,6 +906,8 @@
 .button-show {
   width: 137px;
   height: 36px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   font: inherit;
   text-transform: uppercase;
   grid-column: 3/4;
@@ -903,6 +917,12 @@
   color: var(--basic-white);
   border: 2px solid var(--basic-white);
   border-radius: 2px;
+}
+
+.button-show:hover {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  transition: 0.2s color ease;
 }
 
 .filter-services,
@@ -924,53 +944,42 @@
   margin-bottom: 25px;
 }
 
-.filter-services-checkbox+label::before {
+.filter-services-checkbox+label::before,
+.filter-services-checkbox+label:hover::before {
   content: "";
   position: absolute;
   left: -42px;
   top: 0;
-  width: 21px;
-  height: 21px;
-  border: 2px solid var(--basic-white);
-  border-radius: 4px;
+  width: 23px;
+  height: 23px;
+  background: var(--basic-white);
+  mask-image: url("../img/checkbox-off.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+.filter-services-checkbox:checked+label::before,
+.filter-services-checkbox:checked+label:hover::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 27px;
+  height: 23px;
+  background: var(--basic-white);
+  mask-image: url("../img/checkbox-on.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
 }
 
 .filter-services-checkbox:disabled+label::before {
-  border: 2px solid var(--special-medium-dark);
-  border-radius: 4px;
+  background: var(--special-medium-dark);
 }
 
-.filter-services-checkbox:checked:disabled+label::after,
-.filter-services-checkbox:not(:checked):disabled+label::after {
-  width: 13px;
-  height: 5px;
-  border-radius: 1px;
-  border-left: 4px solid var(--special-medium-dark);
-  border-bottom: 4px solid var(--special-medium-dark);
-  transform: rotate(-45deg);
-}
-
-.filter-services-checkbox:checked+label::after,
-.filter-services-checkbox:not(:checked)+label::after {
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: -36px;
-  width: 13px;
-  height: 5px;
-  border-radius: 1px;
-  border-left: 4px solid var(--basic-white);
-  border-bottom: 4px solid var(--basic-white);
-  transform: rotate(-45deg);
-  transition: all 0.2s ease;
-}
-
-.filter-services-checkbox:not(:checked)+label::after {
-  opacity: 0;
-}
-
-.filter-services-checkbox:checked+label::after {
-  opacity: 1;
+.filter-services-checkbox:checked:disabled+label::before {
+  background: var(--special-medium-dark);
 }
 
 .range-filter {
@@ -1010,6 +1019,7 @@
   appearance: textfield;
   text-align: start;
   border: none;
+  outline: none;
 }
 
 .price-controls-number::-webkit-inner-spin-button {
@@ -1139,7 +1149,7 @@
   display: grid;
   grid-template-columns: min-content 1fr min-content;
   grid-template-rows: repeat(3, min-content);
-  margin-top: 30px;
+  margin-top: 23px;
   margin-bottom: 30px;
 }
 
