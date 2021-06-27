@@ -709,6 +709,19 @@
   color: var(--neutral-white);
 }
 
+.booking-modal-form form {
+  transition: all 0.2s ease-in-out;
+  transform-origin: top;
+}
+
+.booking-modal-form:not([open]) form {
+  transform: scaleY(0);
+}
+
+.booking-modal-form[open] form {
+  transform: scale(1);
+}
+
 .map-container {
   display: block;
 }
