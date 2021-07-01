@@ -193,6 +193,16 @@
   margin-bottom: 42px;
 }
 
+.welcome::before {
+  content: "";
+  position: absolute;
+  top: 77px;
+  left: 371px;
+  width: 456px;
+  height: 350px;
+  background-image: url("../img/main-title-group.png");
+}
+
 .welcome::after {
   content: "";
   position: absolute;
@@ -266,7 +276,7 @@
   margin: 0 auto;
   font-size: 14px;
   line-height: 21px;
-  font-size: 400;
+  font-weight: 400;
   margin-top: 28px;
   content: "— №"counter(section) " —";
 }
@@ -732,6 +742,9 @@
   height: 594px;
 }
 
+.map-container iframe {
+  border: none;
+}
 
 /* стили для footer */
 
