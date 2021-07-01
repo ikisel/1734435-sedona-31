@@ -473,6 +473,7 @@
 }
 
 .booking-form {
+  display: none;
   display: grid;
   row-gap: 30px;
   grid-template-columns: repeat(4, 114px);
@@ -718,8 +719,12 @@
   background-color: var(--basic-dark-blue);
   color: var(--neutral-white);
 }
+.modal-show {
+  display: block;
+  transition: all 0.2s ease;
+}
 
-.booking-modal-form form {
+/* .booking-modal-form form {
   transition: all 0.2s ease-in-out;
   transform-origin: top;
 }
@@ -730,7 +735,7 @@
 
 .booking-modal-form[open] form {
   transform: scale(1);
-}
+} */
 
 .map-container {
   display: block;
